@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Medical ChatBot</title>
+<style>
+  :root { --bg:#f4f6f8; --card:#fff; --ink:#1c2733; --muted:#5f6f80; --line:#dde3ea;
+          --brand:#0f766e; --brand-ink:#fff; --user:#0f766e; --warn-bg:#fdecec; --warn:#b42318; }
+  * { box-sizing:border-box; }
+  body { margin:0; font-family:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+         background:var(--bg); color:var(--ink); }
+  .app { max-width:760px; margin:0 auto; height:100dvh; display:flex; flex-direction:column; }
+  header { padding:14px 16px 10px; }
+  header h1 { margin:0; font-size:1.2rem; }
+  header p { margin:4px 0 0; color:var(--muted); font-size:.85rem; }
+  .banner { margin:0 16px 8px; padding:8px 12px; border-radius:8px; background:var(--warn-bg);
+            color:var(--warn); font-size:.82rem; }
+  #log { flex:1; overflow-y:auto; padding:8px 16px; display:flex; flex-direction:column; gap:10px; }
+  .msg { max-width:88%; padding:10px 13px; border-radius:14px; line-height:1.45; font-size:.95rem;
+         overflow-wrap:anywhere; }
+  .user { align-self:flex-end; background:var(--user); color:#fff; border-bottom-right-radius:4px; }
+  .bot { align-self:flex-start; background:var(--card); border:1px solid var(--line);
+         border-bottom-left-radius:4px; }
+  .bot.urgent { border-color:var(--warn); background:var(--warn-bg); }
+  .bot h3 { margin:0 0 6px; font-size:1rem; }
+  .bot h4 { margin:10px 0 4px; font-size:.85rem; color:var(--brand); text-transform:uppercase;
+            letter-spacing:.03em; }
+  .bot p { margin:0 0 6px; }
+  .bot ul { margin:0; padding-left:18px; }
+  .bot li { margin:2px 0; }
+  .bot .foot { margin-top:8px; color:var(--muted); font-size:.78rem; }
+  .chips { display:flex; gap:6px; flex-wrap:wrap; padding:4px 16px 8px; }
+  .chips button { border:1px solid var(--line); background:var(--card); color:var(--ink);
+                  border-radius:999px; padding:6px 12px; font-size:.82rem; cursor:pointer; }
+  .chips button:hover { border-color:var(--brand); }
+  form { display:flex; gap:8px; padding:10px 16px 16px; }
+  input { flex:1; padding:12px 14px; border:1px solid var(--line); border-radius:10px; font-size:1rem; }
+  input:focus { outline:2px solid var(--brand); outline-offset:1px; }
+  form button { padding:0 18px; border:0; border-radius:10px; background:var(--brand);
+                color:var(--brand-ink); font-size:1rem; cursor:pointer; }
+  form button:disabled { opacity:.5; }
+  .link { background:none; border:0; color:var(--muted); text-decoration:underline; cursor:pointer;
+          font-size:.8rem; padding:0; }
+</style>
+</head>
+<body>
+<div class="app">
+  <header>
+    <h1>Medical ChatBot</h1>
+    <p>General information on common health problems. <button class="link" id="reset" type="button">Start over</button></p>
+  </header>
+  <div class="banner">Not a doctor and cannot diagnose. In an emergency call {{ emergency_number }}.</div>
+  <div id="log" aria-live="polite"></div>
+  <div class="chips" id="chips">
+    <button type="button">I have a fever for 2 days</button>
+    <button type="button">Headache</button>
+    <button type="button">I burned my hand</button>
+    <button type="button">I can't sleep</button>
+    <button type="button">When should I see a doctor?</button>
+  </div>
+  <form id="form" autocomplete="off">
+    <input id="input" maxlength="500" placeholder="Describe your symptom..." aria-label="Your message" required>
+    <button id="send" type="submit">Send</button>
+  </form>
+</div>
+<script>
+const log = document.getElementById("log"), form = document.getElementById("form"),
+      input = document.getElementById("input"), send = document.getElementById("send");
+
+function el(tag, text, cls) {
+  const e = document.createElement(tag);
+  if (text) e.textContent = text;          // textContent: never inject HTML
+  if (cls) e.className = cls;
+  return e;
+}
+function addUser(text) { log.appendChild(el("div", text, "msg user")); scroll(); }
+function addBot(r) {
+  const box = el("div", "", "msg bot" + (r.urgent ? " urgent" : ""));
+  if (r.title) box.appendChild(el("h3", r.title));
+  (r.notes || []).forEach(n => box.appendChild(el("p", n)));
+  (r.sections || []).forEach(s => {
+    box.appendChild(el("h4", s.heading));
+    const ul = el("ul");
+    s.items.forEach(i => ul.appendChild(el("li", i)));
+    box.appendChild(ul);
+  });
+  if ((r.sections || []).length)
+    box.appendChild(el("div", "General information, not a diagnosis.", "foot"));
+  log.appendChild(box); scroll();
+}
+function scroll() { log.scrollTop = log.scrollHeight; }
+
+async function ask(text) {
+  addUser(text); send.disabled = true;
+  try {
+    const res = await fetch("/api/chat", { method: "POST",
+      headers: { "Content-Type": "application/json" }, body: JSON.stringify({ message: text }) });
+    const data = await res.json();
+    addBot(res.ok ? data : { notes: [data.error || "Something went wrong."] });
+  } catch (e) {
+    addBot({ notes: ["Could not reach the server. Please try again."] });
+  } finally { send.disabled = false; input.focus(); }
+}
+form.addEventListener("submit", e => {
+  e.preventDefault();
+  const text = input.value.trim();
+  if (text) { input.value = ""; ask(text); }
+});
+document.getElementById("chips").addEventListener("click", e => {
+  if (e.target.tagName === "BUTTON") ask(e.target.textContent);
+});
+document.getElementById("reset").addEventListener("click", async () => {
+  await fetch("/api/reset", { method: "POST" });
+  log.innerHTML = ""; greet();
+});
+function greet() {
+  addBot({ notes: ["Hello! Tell me a symptom, for example \"I have a fever for 2 days\", and I will share self-care steps and when to see a doctor."] });
+}
+greet();
+</script>
+</body>
+</html>

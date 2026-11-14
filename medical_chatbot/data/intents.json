@@ -1,0 +1,235 @@
+{
+  "topics": [
+    {
+      "tag": "fever",
+      "name": "fever",
+      "keywords": ["fever", "feverish", "high temperature", "temperature", "chills", "bukhar"],
+      "patterns": ["I have a fever", "my temperature is high", "I feel feverish and hot", "running a temperature since morning", "I have chills and body heat", "my child has fever", "how to bring down a fever", "body is burning with fever"],
+      "summary": "A fever is usually the body's response to an infection and often settles within a few days.",
+      "self_care": ["Rest and drink plenty of fluids.", "Wear light clothing and keep the room comfortably cool.", "A fever reducer such as paracetamol can help; follow the label or ask a pharmacist for the right dose.", "Check your temperature every few hours."],
+      "see_doctor": ["The fever lasts more than 3 days.", "Temperature reaches 39.4 C (103 F) or higher.", "A baby under 3 months has any fever.", "There is a stiff neck, rash, confusion, severe headache or trouble breathing."],
+      "escalate_after_days": 3
+    },
+    {
+      "tag": "headache",
+      "name": "headache",
+      "keywords": ["headache", "head ache", "head hurts", "head is hurting", "head pain", "migraine", "head is pounding"],
+      "patterns": ["I have a headache", "my head hurts a lot", "throbbing pain in my head", "I get migraines", "pain in my forehead and temples", "bad headache since yesterday", "my head is pounding", "how to get rid of a headache"],
+      "summary": "Most headaches are tension headaches or migraines and ease with rest.",
+      "self_care": ["Rest in a quiet, dark room.", "Drink water and do not skip meals.", "Take a break from screens and ease neck and shoulder tension.", "A simple pain reliever can help; follow the label or ask a pharmacist."],
+      "see_doctor": ["It is sudden and the worst headache of your life.", "It comes with fever and a stiff neck.", "It follows a head injury.", "There is weakness, numbness, confusion, or a change in vision or speech.", "Headaches keep coming back or keep getting worse."],
+      "escalate_after_days": 3
+    },
+    {
+      "tag": "cold_cough",
+      "name": "cold or cough",
+      "keywords": ["cold", "cough", "coughing", "runny nose", "blocked nose", "stuffy nose", "sneezing", "congestion", "flu"],
+      "patterns": ["I have a cold", "I keep coughing", "runny nose and sneezing", "my nose is blocked", "I think I caught the flu", "dry cough at night", "cough with mucus", "stuffy nose and congestion", "how do I treat a common cold"],
+      "summary": "Colds and most coughs are caused by viruses and usually clear on their own in one to two weeks.",
+      "self_care": ["Rest and drink plenty of warm fluids.", "Breathe in steam or use a humidifier to ease congestion.", "Saline nose drops or spray can help a blocked nose.", "Honey in warm water can soothe a cough (not for children under 1 year)."],
+      "see_doctor": ["Cold symptoms last more than 10 days, or a cough lasts more than 3 weeks.", "You have trouble breathing or chest pain.", "You have a high fever that does not settle.", "You cough up blood."],
+      "escalate_after_days": 10
+    },
+    {
+      "tag": "sore_throat",
+      "name": "sore throat",
+      "keywords": ["sore throat", "throat pain", "throat hurts", "throat is hurting", "painful to swallow", "throat infection", "scratchy throat"],
+      "patterns": ["I have a sore throat", "my throat hurts when I swallow", "pain in my throat", "scratchy throat since two days", "throat feels raw and painful", "how to soothe a sore throat"],
+      "summary": "A sore throat is most often caused by a viral infection and usually improves within a week.",
+      "self_care": ["Gargle with warm salt water.", "Drink warm fluids and stay hydrated.", "Rest your voice.", "Throat lozenges can help adults and older children."],
+      "see_doctor": ["It lasts more than a week.", "You have difficulty swallowing, breathing or opening your mouth.", "You have a high fever or swollen glands.", "Sore throats keep coming back."],
+      "escalate_after_days": 7
+    },
+    {
+      "tag": "diarrhoea",
+      "name": "diarrhoea",
+      "keywords": ["diarrhoea", "loose stools", "watery stools", "upset stomach", "stomach upset", "food poisoning", "stomach bug"],
+      "patterns": ["I have diarrhoea", "I have loose motions", "watery stools since morning", "my stomach is upset", "I think I have food poisoning", "running to the toilet again and again", "stomach bug with loose stools"],
+      "summary": "Diarrhoea is usually caused by an infection or something you ate and often settles in a day or two. The main risk is dehydration.",
+      "self_care": ["Drink plenty of fluids; oral rehydration solution (ORS) is best.", "Eat small, bland meals such as rice, bananas, toast or curd.", "Avoid oily, spicy and very sweet food until you recover.", "Wash your hands often to avoid spreading it."],
+      "see_doctor": ["It lasts more than 2 days in an adult, or more than 24 hours in a child.", "There is blood in the stool or the stool is black.", "You have a high fever or severe stomach pain.", "There are signs of dehydration: very little urine, dizziness, dry mouth."],
+      "escalate_after_days": 2
+    },
+    {
+      "tag": "vomiting",
+      "name": "nausea or vomiting",
+      "keywords": ["vomiting", "vomit", "nausea", "nauseous", "feel sick", "feeling sick", "queasy"],
+      "patterns": ["I keep vomiting", "I feel nauseous", "I threw up twice today", "feeling sick to my stomach", "I feel like vomiting", "nausea after eating", "queasy and cannot eat"],
+      "summary": "Nausea and vomiting are often caused by a stomach infection or food and usually pass within a day or two.",
+      "self_care": ["Take small, frequent sips of water or ORS.", "Avoid solid food until the vomiting stops, then start with bland food.", "Rest, and avoid strong smells.", "Avoid alcohol, caffeine and oily food."],
+      "see_doctor": ["You cannot keep fluids down for 24 hours.", "There is blood in the vomit, or it looks like coffee grounds.", "You have severe stomach pain or a severe headache.", "There are signs of dehydration: very little urine, dizziness, dry mouth."],
+      "escalate_after_days": 2
+    },
+    {
+      "tag": "constipation",
+      "name": "constipation",
+      "keywords": ["constipation", "constipated", "hard stools", "cannot pass stool", "not passing stool"],
+      "patterns": ["I am constipated", "I have not passed stool in three days", "hard stools and straining", "difficulty going to the toilet", "bowel movement is very hard", "how to relieve constipation"],
+      "summary": "Constipation is common and usually improves with changes to diet and routine.",
+      "self_care": ["Eat more fibre: fruit, vegetables, whole grains and pulses.", "Drink more water through the day.", "Be physically active every day.", "Do not ignore the urge to go, and give yourself time."],
+      "see_doctor": ["It lasts more than 2 to 3 weeks.", "There is blood in the stool.", "You have severe stomach pain or vomiting.", "You are losing weight without trying."],
+      "escalate_after_days": 14
+    },
+    {
+      "tag": "acidity",
+      "name": "acidity or heartburn",
+      "keywords": ["acidity", "heartburn", "acid reflux", "indigestion", "gas", "bloating", "burning in chest", "burning in my chest", "sour taste"],
+      "patterns": ["I have acidity", "burning feeling in my chest after eating", "I get heartburn at night", "acid reflux and sour taste in mouth", "indigestion and bloating", "too much gas in my stomach", "burning sensation after meals"],
+      "summary": "Acidity and heartburn happen when stomach acid rises into the food pipe, often after large or spicy meals.",
+      "self_care": ["Eat smaller meals and eat slowly.", "Do not lie down for 2 to 3 hours after eating.", "Cut down on spicy, oily and acidic food, and on tea, coffee and alcohol.", "Raise the head of your bed if symptoms come at night."],
+      "see_doctor": ["It happens more than twice a week or does not improve.", "You have difficulty or pain when swallowing.", "You are vomiting, or losing weight without trying.", "Chest pain with sweating, breathlessness or pain spreading to the arm or jaw is an emergency."],
+      "escalate_after_days": 14
+    },
+    {
+      "tag": "cut",
+      "name": "minor cut or wound",
+      "keywords": ["cut", "wound", "scrape", "graze", "bleeding finger", "small cut"],
+      "patterns": ["I cut my finger", "I have a small wound", "I scraped my knee", "how to clean a cut", "small cut is bleeding", "I got a graze from falling", "how do I treat a minor wound"],
+      "summary": "Most small cuts and grazes can be treated at home.",
+      "self_care": ["Wash your hands, then press on the cut with a clean cloth until bleeding stops.", "Rinse the wound under clean running water.", "Pat dry and cover with a clean dressing or plaster.", "Change the dressing daily and keep the wound clean and dry."],
+      "see_doctor": ["Bleeding does not stop after 10 minutes of firm pressure.", "The cut is deep, gaping, or has something stuck in it.", "It was caused by an animal or human bite, or a dirty or rusty object.", "It becomes red, swollen, warm, or has pus.", "You are not sure your tetanus vaccination is up to date."]
+    },
+    {
+      "tag": "burn",
+      "name": "minor burn",
+      "keywords": ["burn", "burned", "burnt", "scald", "scalded"],
+      "patterns": ["I burned my hand", "I got burnt while cooking", "hot water scalded my arm", "how to treat a small burn", "I touched a hot pan", "burn from hot oil"],
+      "summary": "Small, shallow burns can usually be treated at home.",
+      "self_care": ["Cool the burn under cool running water for 20 minutes.", "Remove rings, watches and tight clothing near the burn before it swells.", "Cover loosely with a clean, non-fluffy dressing or cling film.", "Do not use ice, butter, oil or toothpaste, and do not burst blisters."],
+      "see_doctor": ["The burn is larger than the palm of your hand, or deep.", "It is on the face, hands, feet, genitals or over a joint.", "It was caused by chemicals or electricity.", "It shows signs of infection: increasing pain, redness, swelling or pus.", "The person is a young child or an older adult."]
+    },
+    {
+      "tag": "sprain",
+      "name": "sprain or strain",
+      "keywords": ["sprain", "sprained", "twisted my ankle", "twisted ankle", "strain", "pulled muscle", "swollen ankle"],
+      "patterns": ["I sprained my ankle", "I twisted my ankle while running", "my wrist is swollen after a fall", "I pulled a muscle", "ankle is swollen and painful", "how to treat a sprain"],
+      "summary": "Mild sprains and strains usually improve over one to two weeks.",
+      "self_care": ["Rest the injured part and avoid activities that hurt.", "Apply ice wrapped in a cloth for 15 to 20 minutes every few hours.", "Use a compression bandage, not too tight.", "Keep the injured part raised above heart level when you can."],
+      "see_doctor": ["You cannot put weight on it or move the joint.", "There is severe swelling, bruising or the joint looks out of shape.", "There is numbness or tingling.", "It is not improving after a few days."],
+      "escalate_after_days": 7
+    },
+    {
+      "tag": "back_pain",
+      "name": "back pain",
+      "keywords": ["back pain", "backache", "back ache", "back hurts", "lower back", "stiff back"],
+      "patterns": ["I have back pain", "my lower back hurts", "backache from sitting all day", "stiff back in the morning", "pain in my back when I bend", "how to relieve back pain"],
+      "summary": "Most back pain is caused by muscle strain and improves within a few weeks.",
+      "self_care": ["Stay as active as you can; long bed rest slows recovery.", "Apply a heat pack to the sore area.", "Avoid heavy lifting and check your sitting posture.", "Gentle stretching can help once the pain eases."],
+      "see_doctor": ["You have numbness or weakness in the legs.", "You lose control of your bladder or bowels; this is an emergency.", "The pain started after a fall or injury.", "You also have fever or unexplained weight loss.", "It has not improved after a few weeks."],
+      "escalate_after_days": 21
+    },
+    {
+      "tag": "allergy",
+      "name": "mild allergy",
+      "keywords": ["allergy", "allergic", "hives", "itchy skin", "itching", "skin rash", "rash", "itchy eyes"],
+      "patterns": ["I have an allergy", "my skin is itchy and red", "I got a rash on my arm", "itchy eyes and sneezing from dust", "hives after eating", "allergic reaction on my skin", "how to treat an itchy rash"],
+      "summary": "Mild allergies cause sneezing, itchy eyes or an itchy rash and usually settle once you avoid the trigger.",
+      "self_care": ["Find and avoid the trigger if you can (dust, pollen, a food, a new product).", "Wash the skin with cool water and avoid scratching.", "A cool compress can ease itching.", "Ask a pharmacist about an antihistamine that is suitable for you."],
+      "see_doctor": ["The rash spreads quickly, blisters, or does not improve in a few days.", "You have fever with the rash.", "Swelling of the lips, face or throat, or trouble breathing, is an emergency."],
+      "escalate_after_days": 5
+    },
+    {
+      "tag": "dehydration",
+      "name": "dehydration",
+      "keywords": ["dehydration", "dehydrated", "very thirsty", "dry mouth", "dark urine"],
+      "patterns": ["I think I am dehydrated", "I feel very thirsty and dizzy", "my urine is dark yellow", "dry mouth and tired in the heat", "how do I know if I am dehydrated", "not drinking enough water"],
+      "summary": "Dehydration happens when you lose more fluid than you take in. Signs are thirst, dark urine, a dry mouth, tiredness and dizziness.",
+      "self_care": ["Drink water in small, frequent sips.", "Use oral rehydration solution (ORS) if you have had diarrhoea, vomiting or heavy sweating.", "Rest in a cool place.", "Avoid alcohol and too much caffeine."],
+      "see_doctor": ["You pass very little or no urine.", "You feel confused, very drowsy or faint.", "You cannot keep fluids down.", "A baby or older person shows signs of dehydration."]
+    },
+    {
+      "tag": "sleep",
+      "name": "trouble sleeping",
+      "keywords": ["cannot sleep", "insomnia", "trouble sleeping", "sleepless", "not able to sleep", "sleep problem", "sleep problems"],
+      "patterns": ["I cannot sleep at night", "I have insomnia", "trouble falling asleep", "I wake up many times at night", "how can I sleep better", "I am not getting enough sleep", "I lie awake for hours"],
+      "summary": "Trouble sleeping is common and often improves with a steady routine.",
+      "self_care": ["Go to bed and wake up at the same time every day.", "Avoid caffeine in the evening and heavy meals late at night.", "Put screens away for an hour before bed.", "Keep the bedroom dark, quiet and cool.", "Be active in the day, but not just before bed."],
+      "see_doctor": ["Poor sleep has lasted more than a month.", "It affects your work, studies or mood.", "You snore loudly and wake up gasping."],
+      "escalate_after_days": 30
+    },
+    {
+      "tag": "stress",
+      "name": "stress or anxiety",
+      "keywords": ["stress", "stressed", "anxiety", "anxious", "worried", "overwhelmed", "panic", "tense"],
+      "patterns": ["I feel stressed", "I am anxious all the time", "I feel overwhelmed with work", "I worry too much", "I am tense before exams", "how to manage stress", "I had a panic feeling"],
+      "summary": "Stress and anxiety are common, and there are simple things that can help you feel steadier.",
+      "self_care": ["Try slow breathing: in for 4 counts, out for 6, for a few minutes.", "Be physically active; even a short walk helps.", "Keep regular sleep and meals.", "Talk to someone you trust about what is on your mind.", "Break big tasks into small steps."],
+      "see_doctor": ["It lasts more than 2 weeks or keeps getting worse.", "It gets in the way of work, studies, sleep or relationships.", "You have panic attacks.", "You have thoughts of harming yourself; please seek help right away."],
+      "escalate_after_days": 14
+    },
+    {
+      "tag": "blood_pressure",
+      "name": "blood pressure",
+      "keywords": ["blood pressure", "hypertension", "high bp", "low bp", "bp"],
+      "patterns": ["I have high blood pressure", "how to control blood pressure", "my bp is high", "what is hypertension", "tips to lower bp", "what is a normal blood pressure"],
+      "summary": "High blood pressure usually has no symptoms, so regular checks matter. A normal adult reading is below about 120/80 mmHg.",
+      "self_care": ["Cut down on salt and processed food.", "Be active for about 30 minutes on most days.", "Keep a healthy weight, and limit alcohol and tobacco.", "Take prescribed medicines exactly as your doctor advised.", "Check your blood pressure regularly and keep a record."],
+      "see_doctor": ["Your readings stay at or above 140/90.", "You want to start, stop or change any medicine.", "A very high reading with chest pain, severe headache, breathlessness or vision change is an emergency."]
+    },
+    {
+      "tag": "diabetes",
+      "name": "diabetes",
+      "keywords": ["diabetes", "diabetic", "blood sugar", "sugar level", "sugar levels"],
+      "patterns": ["I have diabetes", "how to control blood sugar", "my sugar level is high", "diet tips for a diabetic", "what are the signs of diabetes", "how to manage sugar levels"],
+      "summary": "Diabetes means blood sugar stays too high. Common signs are frequent urination, strong thirst, tiredness and slow-healing wounds.",
+      "self_care": ["Eat regular, balanced meals with fewer sugary foods and drinks.", "Be physically active on most days.", "Take medicines or insulin exactly as prescribed.", "Check your blood sugar as your doctor advised.", "Look after your feet and get regular eye checks."],
+      "see_doctor": ["You have signs of diabetes and have not been tested.", "Your readings stay outside the range your doctor set.", "You have a wound that is not healing.", "Confusion, very fast breathing, or fainting needs urgent care."]
+    }
+  ],
+  "general": [
+    {
+      "tag": "greeting",
+      "keywords": ["hello", "hi", "hey", "good morning", "good evening", "good afternoon", "namaste"],
+      "patterns": ["hello", "hi there", "hey", "good morning", "good evening", "namaste", "hi bot"],
+      "response": "Hello! I can share general information on common health problems like fever, headache, cold, stomach upset, minor injuries, sleep and stress. What is troubling you?"
+    },
+    {
+      "tag": "thanks",
+      "keywords": ["thanks", "thank you", "thankyou", "thx"],
+      "patterns": ["thanks", "thank you so much", "thanks a lot", "that was helpful", "thank you for the help"],
+      "response": "You're welcome. Take care, and see a doctor if things do not improve."
+    },
+    {
+      "tag": "goodbye",
+      "keywords": ["bye", "goodbye", "see you", "good night"],
+      "patterns": ["bye", "goodbye", "see you later", "good night", "that is all, bye"],
+      "response": "Goodbye, and take care of yourself."
+    },
+    {
+      "tag": "capabilities",
+      "keywords": ["what can you do", "who are you", "what are you", "help me", "help"],
+      "patterns": ["what can you do", "who are you", "how can you help me", "what topics do you know", "help", "what should I ask you"],
+      "response": "I am a simple health information chatbot. Tell me a symptom, such as 'I have a fever for 2 days' or 'I burned my hand', and I will share self-care steps and when to see a doctor. I cannot diagnose, prescribe medicines, or replace a doctor."
+    },
+    {
+      "tag": "medication",
+      "keywords": ["dose", "dosage", "how many tablets", "how much paracetamol", "antibiotic", "antibiotics", "which medicine", "what medicine", "which tablet", "prescribe"],
+      "patterns": ["what dose should I take", "how many tablets can I take", "which medicine should I take for this", "can I take antibiotics", "prescribe me something", "what is the dosage of paracetamol", "can I take two medicines together"],
+      "response": "I can't recommend specific medicines or doses. The right medicine and dose depend on your age, weight, other conditions and other medicines. Please follow the label, or ask a pharmacist or doctor. Do not take antibiotics without a prescription."
+    },
+    {
+      "tag": "diagnosis",
+      "keywords": ["diagnose", "diagnosis", "what disease do i have", "what do i have", "do i have cancer", "is it cancer"],
+      "patterns": ["can you diagnose me", "what disease do I have", "tell me what is wrong with me", "do I have cancer", "what is my diagnosis", "is this something serious like cancer"],
+      "response": "I can't diagnose conditions. I can only share general information on common symptoms. For a diagnosis you need a doctor who can examine you and order tests if needed. If you tell me your symptom, I can share self-care steps and warning signs."
+    },
+    {
+      "tag": "find_doctor",
+      "keywords": ["appointment", "book a doctor", "find a doctor", "nearest hospital", "which doctor", "specialist"],
+      "patterns": ["book an appointment for me", "I want to see a doctor", "find a doctor near me", "where is the nearest hospital", "which specialist should I visit", "can you connect me to a doctor"],
+      "response": "I can't book appointments or find clinics. For most problems, start with a general physician, who can refer you to a specialist if needed. In an emergency, call 112."
+    }
+  ],
+  "followups": [
+    {
+      "tag": "followup_doctor",
+      "keywords": ["when should i see a doctor", "should i see a doctor", "is it serious", "should i worry", "should i be worried", "is it dangerous", "when to see a doctor", "do i need a doctor", "warning signs"],
+      "patterns": ["when should I see a doctor", "is it serious", "should I be worried about it", "is this dangerous", "do I need to go to a hospital for this", "what are the warning signs"]
+    },
+    {
+      "tag": "followup_selfcare",
+      "keywords": ["what can i do", "what should i do", "home remedy", "home remedies", "how to treat it", "how do i treat it", "what helps", "how to cure it", "any tips"],
+      "patterns": ["what can I do about it", "what should I do now", "any home remedies", "how do I treat it at home", "what helps with this", "give me some tips"]
+    }
+  ]
+}
